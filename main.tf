@@ -47,8 +47,7 @@ resource "aws_iam_user_policy_attachment" "this" {
 }
 
 module "secret_iam" {
-  source  = "Infrastrukturait/secret-manager/aws"
-  version = "0.2.0"
+  source  = "github.com/Qlos/terraform-aws-secret-manager?ref=v1.0.0"
 
   count = var.sm_enabled ? 1 : 0
 
